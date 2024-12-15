@@ -1,0 +1,15 @@
+@keyframes blink {
+    0%, 100% {
+      transform: scaleY(1); /* Open */
+    }
+    50% {
+      transform: scaleY(0.1); /* Closed */
+    }
+  }
+  
+  .eye-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    animation: blink 2s infinite;
+  }

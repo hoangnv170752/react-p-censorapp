@@ -1,5 +1,6 @@
 import React from "react";
-
+import eyeIcon from '../assets/eye.svg';
+import './navigation.css';
 export const Navigation = (props) => {
   return (
     <nav id="menu" className="navbar navbar-default navbar-fixed-top">
@@ -17,7 +18,16 @@ export const Navigation = (props) => {
             <span className="icon-bar"></span>{" "}
             <span className="icon-bar"></span>{" "}
           </button>
-          <a className="navbar-brand page-scroll" href="#page-top">
+          <a
+            className="navbar-brand page-scroll"
+            href="#page-top"
+            style={{ display: 'flex', alignItems: 'center' }}
+          >
+            <img
+              src={eyeIcon}
+              alt="Eye Icon"
+              className="eye-icon"
+            />
             SAFE EYE
           </a>{" "}
         </div>
@@ -44,7 +54,7 @@ export const Navigation = (props) => {
             </li>
             <li>
               <a href="#portfolio" className="page-scroll">
-                Gallery
+                Image Prevention
               </a>
             </li>
             <li>

@@ -6,10 +6,9 @@ export const Gallery = (props) => {
     <div id="portfolio" className="text-center">
       <div className="container">
         <div className="section-title">
-          <h2>Gallery</h2>
+          <h2>Image Prevention</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
-            dapibus leonec.
+            We understand that children can inadvertently be exposed to adult content, potentially compromising the innocence of their childhood. Our mission is to help you safeguard and protect their purity.
           </p>
         </div>
         <div className="row">
