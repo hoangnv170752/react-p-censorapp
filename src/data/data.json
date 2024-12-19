@@ -100,33 +100,33 @@
   "Testimonials": [
     {
       "img": "img/testimonials/01.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "John Doe"
+      "text": "\"Using this service has significantly improved our content monitoring. The AI detection is fast and accurate, saving us a lot of time and effort.\"",
+      "name": "Alice Johnson"
     },
     {
       "img": "img/testimonials/02.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "Johnathan Doe"
+      "text": "\"The horror and violence video detection feature is amazing! It has helped us maintain a safe platform for our audience.\"",
+      "name": "Mark Thompson"
     },
     {
       "img": "img/testimonials/03.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "John Doe"
+      "text": "\"Real-time video streaming safeguarding is a game-changer. We now have peace of mind knowing inappropriate content won’t make it to our live streams.\"",
+      "name": "Sophia Lee"
     },
     {
       "img": "img/testimonials/04.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "Johnathan Doe"
+      "text": "\"I was impressed with how quickly the system detected and flagged adult content images. It works flawlessly for our needs.\"",
+      "name": "Chris Anderson"
     },
     {
       "img": "img/testimonials/05.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "John Doe"
+      "text": "\"The text and image content filtering is so robust! It caught everything we wanted to block and made our platform safer for users.\"",
+      "name": "Natalie Wright"
     },
     {
       "img": "img/testimonials/06.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "Johnathan Doe"
+      "text": "\"Excellent service with top-notch customer support. They helped us set everything up and were always there to answer our questions.\"",
+      "name": "Michael Carter"
     }
   ],
   "Team": [
@@ -159,26 +159,26 @@
     "twitter": "twitter.com",
     "youtube": "youtube.com"
   },
-  "Features": [
-    {
-      "icon": "fa fa-comments-o",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
-    },
-    {
-      "icon": "fa fa-bullhorn",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
-    },
-    {
-      "icon": "fa fa-group",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
-    },
-    {
-      "icon": "fa fa-magic",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
-    }
-  ]
+    "Features": [
+      {
+        "icon": "fa fa-shield", 
+        "title": "Adult Content Image Detection",
+        "text": "Automatically detect and block explicit or inappropriate adult content in images to ensure a safe environment for all users."
+      },
+      {
+        "icon": "fa fa-video-camera", 
+        "title": "Horror and Violence Video Detection",
+        "text": "Identify and manage videos containing violent or distressing content, promoting a safe and positive user experience."
+      },
+      {
+        "icon": "fa fa-eye", 
+        "title": "Real-Time Video Streaming Safeguard",
+        "text": "Monitor and safeguard live video streams in real-time to prevent the spread of harmful or inappropriate content."
+      },
+      {
+        "icon": "fa fa-filter", 
+        "title": "Text and Image Content Filtering",
+        "text": "Filter text and image content for offensive language, spam, or inappropriate material to maintain a clean platform."
+      }
+    ]
 }

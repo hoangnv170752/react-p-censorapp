@@ -13,3 +13,9 @@
     margin-right: 8px;
     animation: blink 2s infinite;
   }
+  .eye-icon-header {
+    width: 100px;
+    height: 100px;
+    animation: blink 2s infinite;
+    color: #ffff;
+  }
