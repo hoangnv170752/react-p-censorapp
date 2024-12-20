@@ -1,11 +1,16 @@
 const express = require('express'); 
 const bodyParser = require('body-parser');
 const multer = require('multer');
-const tf = require('@tensorflow/tfjs-node'); // For server-side TensorFlow model loading
+const tf = require('@tensorflow/tfjs-node');
 const path = require('path');
 const fs = require('fs');
+const cors = require('cors');
+
 const app = express(); 
 const server = require('http').Server(app);
+
+app.use(cors({origin: '*'}));
+
 server.listen(process.env.PORT || 4444);
 
 app.use(express.static('public'));
