@@ -1,10 +1,17 @@
 import React, { useState, useEffect, useRef } from "react";
-
+import './Gallery.css';
 export const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [results, setResults] = useState(null);
   const [loading, setLoading] = useState(false);
   const canvasRef = useRef(null);
+
+  const demoImages = [
+    { src: "/img/demo1.png", alt: "Demo 1" },
+    { src: "/img/demo1-res.png", alt: "Demo 1 Result" },
+    { src: "/img/demo2.png", alt: "Demo 2" },
+    { src: "/img/demo2-res.png", alt: "Demo 2 Result" },
+  ];
 
   const labelMap = {
     1: { name: "Breast", color: "yellow" },
@@ -12,13 +19,11 @@ export const Gallery = () => {
     3: { name: "Mrp", color: "blue" },
   };
 
-  // Handle image selection
   const handleImageChange = (event) => {
     setSelectedImage(event.target.files[0]);
-    setResults(null); // Clear previous results
+    setResults(null);
   };
 
-  // Upload image and fetch detection results
   const handleUpload = async () => {
     if (!selectedImage) {
       alert("Please select an image first!");
@@ -50,7 +55,6 @@ export const Gallery = () => {
     }
   };
 
-  // Draw detections on the canvas
   const drawDetections = (boxes, classes, scores, threshold) => {
     if (!canvasRef.current || !selectedImage) return;
 
@@ -59,7 +63,6 @@ export const Gallery = () => {
     const img = new Image();
 
     img.onload = () => {
-      // Set canvas dimensions
       canvas.width = img.width;
       canvas.height = img.height;
 
@@ -101,7 +104,6 @@ export const Gallery = () => {
     img.src = URL.createObjectURL(selectedImage);
   };
 
-  // Redraw canvas whenever results change
   useEffect(() => {
     if (results) {
       drawDetections(results.boxes, results.classes, results.scores, 0.6);
@@ -119,30 +121,47 @@ export const Gallery = () => {
             help you safeguard and protect their purity.
           </p>
         </div>
-        <div className="bg-white shadow-md rounded-lg p-8 w-full max-w-md mx-auto">
-          <h2 className="text-xl font-semibold mb-4">Upload an *NSFW* B-Image</h2>
+
+        <div className="gallery-container">
+          {demoImages.map((demo, index) => (
+            <div key={index} className="gallery-item">
+              <img
+                src={demo.src}
+                alt={demo.alt}
+                className="gallery-image"
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* Upload Section */}
+        <div className="bg-white shadow-md rounded-lg p-8 w-full max-w-md mx-auto" style={{ alignContent: 'center', justifyContent: 'center' }}>
+          <h3 className="text-xl font-semibold mb-4">Upload an *NSFW* B-Image</h3>
+          <div id="file-input-container" style={{ alignContent: 'center', justifyContent: 'center' }}>
+            <button
+              onClick={handleUpload}
+              disabled={loading}
+              className={`mt-4 w-full py-2 px-4 text-white font-bold rounded-lg ${
+                loading ? "bg-blue-300" : "bg-blue-600 hover:bg-blue-700"
+              }`}
+              style={{ height: "50", borderRadius: "10px", color: "black" }}
+              id="file-button"
+            >
+              {loading ? "Processing..." : "Upload and Detect"}
+            </button>
+          </div>
+          <label htmlFor="file-upload" id="file-input-label">
+            Choose a NSFW Image
+          </label>
           <input
+            id="file-upload"
             type="file"
             accept="image/*"
-            className="block w-full text-sm text-gray-500
-              file:mr-4 file:py-2 file:px-4
-              file:rounded-full file:border-0
-              file:text-sm file:font-semibold
-              file:bg-blue-50 file:text-blue-700
-              hover:file:bg-blue-100"
+            className="file-input"
             onChange={handleImageChange}
-          />
-          <button
-            onClick={handleUpload}
-            disabled={loading}
-            className={`mt-4 w-full py-2 px-4 text-white font-bold rounded-lg ${
-              loading ? "bg-blue-300" : "bg-blue-600 hover:bg-blue-700"
-            }`}
-            style={{ backgroundColor: "red", color: "white", height: "50", borderRadius: "10px" }}
-          >
-            {loading ? "Processing..." : "Upload and Detect"}
-          </button>
+          /> 
         </div>
+
         {selectedImage && (
           <div className="mt-6">
             <h4 className="text-lg font-medium text-gray-800 mb-2">Preview:</h4>
@@ -152,12 +171,6 @@ export const Gallery = () => {
             ></canvas>
           </div>
         )}
-        {/* {results && (
-          <div className="mt-6 bg-gray-100 p-4 rounded-lg text-left text-sm text-gray-700 overflow-auto">
-            <h4 className="text-lg font-medium text-gray-800 mb-2">Detection Results:</h4>
-            <pre>{JSON.stringify(results, null, 2)}</pre>
-          </div>
-        )} */}
       </div>
     </div>
   );
