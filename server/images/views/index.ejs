@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="image-assets/tensorflow-favicon.ico">
+    <title>NSFW Image Censorship</title>
+    <link rel="stylesheet" href="css/index-style.css">
+    <script src="plugins/tf.min.js"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>-->
+</head>
+<body>
+    <div id="container">
+        <h3>Pick an image:</h3>
+        <input type="file" name="image" id="image" accept="image/*">
+        <button onclick="detectNSFW()">Proceed</button> <br>
+        <img width="640" height="400" id="nsfw-image" style="visibility: hidden;">
+        <canvas width="640" height="400" id="detection-canvas"></canvas>
+    </div>
+
+    <script>
+        var fileSource = document.getElementById("image");
+        var imgElement = document.getElementById("nsfw-image");
+        function detectNSFW() {
+            showImage(fileSource);
+        }
+
+        function showImage(input) {
+            imgElement.style.visibility = "visible";
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    imgElement.setAttribute("src", e.target.result);
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+    <script src="image-detection-controller.js"></script>
+</body>
+</html>
