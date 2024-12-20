@@ -137,7 +137,20 @@ export const Gallery = () => {
         {/* Upload Section */}
         <div className="bg-white shadow-md rounded-lg p-8 w-full max-w-md mx-auto" style={{ alignContent: 'center', justifyContent: 'center' }}>
           <h3 className="text-xl font-semibold mb-4">Upload an *NSFW* B-Image</h3>
-          <div id="file-input-container" style={{ alignContent: 'center', justifyContent: 'center' }}>
+          <div style={{ alignContent: 'center', justifyContent: 'center', alignItems: 'center' }}>
+            <label htmlFor="file-upload" id="file-input-label" style={{ fontSize: "22px", marginRight: 20}}>
+              Choose a NSFW Image (Exp data: Mannequinn)
+            </label>
+            <input
+              id="file-upload"
+              type="file"
+              accept="image/*"
+              className="file-input"
+              onChange={handleImageChange}
+              style={{ border: "1px solid"}}
+            /> 
+          </div>
+          <div id="file-input-container" style={{ alignItems: 'center', justifyContent: 'center', marginTop: 40 }}>
             <button
               onClick={handleUpload}
               disabled={loading}
@@ -150,25 +163,27 @@ export const Gallery = () => {
               {loading ? "Processing..." : "Upload and Detect"}
             </button>
           </div>
-          <label htmlFor="file-upload" id="file-input-label">
-            Choose a NSFW Image
-          </label>
-          <input
-            id="file-upload"
-            type="file"
-            accept="image/*"
-            className="file-input"
-            onChange={handleImageChange}
-          /> 
         </div>
 
         {selectedImage && (
-          <div className="mt-6">
-            <h4 className="text-lg font-medium text-gray-800 mb-2">Preview:</h4>
-            <canvas
-              ref={canvasRef}
-              className="border border-gray-200 rounded-lg mx-auto"
-            ></canvas>
+          <div className="preview-container">
+            <div className="preview-row">
+              <div className="column">
+                <h5 className="column-title">Original Image:</h5>
+                <img
+                  src={URL.createObjectURL(selectedImage)}
+                  alt="Original"
+                  className="image-display"
+                />
+              </div>
+              <div className="column">
+                <h5 className="column-title">Processed Image:</h5>
+                <canvas
+                  ref={canvasRef}
+                  className="image-display"
+                ></canvas>
+              </div>
+            </div>
           </div>
         )}
       </div>

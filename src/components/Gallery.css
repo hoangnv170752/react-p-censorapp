@@ -55,3 +55,43 @@
     align-items: center;
     justify-content: center;
   }
+
+  .preview-container {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+  
+  .preview-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1rem;
+  }
+  
+  .preview-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+  
+  .column {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .column-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #4b5563;
+    margin-bottom: 0.5rem;
+  }
+  
+  .image-display {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+  }
