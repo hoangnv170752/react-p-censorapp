@@ -4,18 +4,18 @@
     "paragraph": "Safe Eye is a browser extension designed to protect children from unfiltered and inappropriate content on the internet. By automatically blurring adult material and harmful media, Safe Eye ensures a safer online environment, preserving the innocence of young minds while empowering parents with peace of mind."
   },
   "About": {
-    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "paragraph": "Hi, my name is Akashi (あかし). I am currently the App-Cloud team leader at the R&D Digital Center - RALACO and pursuing my Master’s degree in Mechatronics. With a passion for technology, I aim to become a Fullstack Developer. My expertise spans Front-end development with Web Apps (ReactJS, Angular) and Mobile Apps (Flutter, React Native), along with a growing interest in AI and Machine Learning. Additionally, I am a self-taught backend developer exploring frameworks like Node.js, Flask, and Spring Boot.",
     "Why": [
-      "Lorem ipsum dolor",
-      "Tempor incididunt",
-      "Lorem ipsum dolor",
-      "Incididunt ut labore"
+      "Led a team in developing cutting-edge cloud and app solutions at RALACO",
+      "Diverse skill set in Web and Mobile App development",
+      "Strong foundation in AI, Machine Learning, and Mechatronics",
+      "Proven ability to manage complex technical projects effectively"
     ],
     "Why2": [
-      "Aliquip ex ea commodo",
-      "Lorem ipsum dolor",
-      "Exercitation ullamco",
-      "Lorem ipsum dolor"
+      "Self-taught backend development skills with modern frameworks",
+      "Passion for continuous learning and technological innovation",
+      "Extensive hands-on experience in Front-end technologies",
+      "Dedicated to creating user-friendly and efficient applications"
     ]
   },
   "Gallery": [
@@ -131,30 +131,15 @@
   ],
   "Team": [
     {
-      "img": "img/team/01.jpg",
-      "name": "John Doe",
-      "job": "Director"
-    },
-    {
-      "img": "img/team/02.jpg",
-      "name": "Mike Doe",
-      "job": "Senior Designer"
-    },
-    {
-      "img": "img/team/03.jpg",
-      "name": "Jane Doe",
-      "job": "Senior Designer"
-    },
-    {
-      "img": "img/team/04.jpg",
-      "name": "Karen Doe",
-      "job": "Project Manager"
+      "img": "img/team/aboutme.jpg",
+      "name": "Nguyen Hoang",
+      "job": "Fullstack Developer"
     }
   ],
   "Contact": {
-    "address": "4321 California St, San Francisco, CA 12345 ",
-    "phone": "+1 123 456 1234",
-    "email": "info@company.com",
+    "address": "103/112 Ngoc Khanh street, Ba Dinh district, Hanoi city, Vietnam",
+    "phone": "+84 3545 30 717",
+    "email": "hoang.nv.ral@gmail.com",
     "facebook": "fb.com",
     "twitter": "twitter.com",
     "youtube": "youtube.com"
