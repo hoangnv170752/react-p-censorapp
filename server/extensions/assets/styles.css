@@ -1,0 +1,103 @@
+/* General Body Styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9fafc;
+}
+
+/* Container */
+#container {
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Section */
+.header {
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.description {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Main Content */
+.main-content {
+  margin-top: 20px;
+}
+
+h3 {
+  font-size: 1rem;
+  color: #444;
+}
+
+.file-input {
+  display: block;
+  margin: 10px auto;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.proceed-button {
+  background-color: #2563eb;
+  color: #fff;
+  font-size: 1rem;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.proceed-button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Preview Section */
+.preview-section {
+  margin-top: 20px;
+}
+
+.preview-image {
+  display: block;
+  margin: 10px auto;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.detection-canvas {
+  display: block;
+  margin: 10px auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Footer Section */
+.footer {
+  margin-top: 30px;
+  font-size: 0.8rem;
+  color: #888;
+}

@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Debug Extension",
+  "version": "1.0",
+  "description": "Extension to debug content script",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  }
+}

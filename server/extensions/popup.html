@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="image-assets/tensorflow-favicon.ico">
+    <title>NSFW Image Censorship</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <div id="container">
+        <header class="header">
+            <img src="logo.png" alt="NSFW Censorship Logo" class="logo">
+            <h2 class="title">NSFW Image Censorship</h2>
+            <p class="description">
+                Protect your browsing experience by detecting and censoring inappropriate images.
+            </p>
+        </header>
+        
+        <main class="main-content">
+            <h3>Upload an Image:</h3>
+            <input 
+                type="file" 
+                name="image" 
+                id="image" 
+                accept="image/*" 
+                class="file-input"
+            >
+            <button class="proceed-button">Proceed</button> 
+            
+            <div class="preview-section">
+                <h4>Preview:</h4>
+                <img 
+                    width="640" 
+                    height="400" 
+                    id="nsfw-image" 
+                    class="preview-image" 
+                    alt="Image Preview"
+                >
+                <canvas 
+                    width="640" 
+                    height="400" 
+                    id="detection-canvas" 
+                    class="detection-canvas"
+                ></canvas>
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <p>&copy; 2024 NSFW Image Censorship Extension. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
